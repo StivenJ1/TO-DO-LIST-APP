@@ -1,0 +1,33 @@
+<ion-header  [translucent]="true" >
+  <ion-toolbar class="bg-toolbar">
+    <ion-title class="text-gray-blue-800 font-bold text-3xl text-center">
+      ¡To Do List!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-page" [fullscreen]="true">
+  <ion-button class="w-24 text-white font-bold bg-gray-blue-300 rounded-md border border-gray-blue-500 mt-5 ml-5" (click)="redirect()">
+    Volver
+  </ion-button>
+  <div class="w-full flex flex-col items-center justify-center gap-5 p-5">
+    <div class="text-lg font-bold text-black">Digita tu nueva tarea</div>
+    <form [formGroup]="formCreate" class="w-full flex flex-col items-center gap-5 p-5">
+      <ion-input formControlName="name" class="w-full text-black! font-bold bg-gray-blue-200 rounded-md border border-gray-blue-500 p-2!"
+        placeholder="Nombre de la tarea"></ion-input>
+      <ion-textarea formControlName="description" class="w-full text-black! font-bold bg-gray-blue-200 rounded-md border border-gray-blue-500 p-2!"
+        placeholder="Descripción de la tarea"></ion-textarea>
+      <ion-select formControlName="category" class="w-full text-black! font-bold bg-gray-blue-200 rounded-md border border-gray-blue-500 p-2!"
+        placeholder="Selecciona una categoría" interface="popover">
+        @for(category of categoryList(); track $index){
+          <ion-select-option [value]="category.id">{{ category.name }}</ion-select-option>
+        }
+      </ion-select>
+      <div class="w-full h-9 flex justify-center items-center mt-0">
+        <ion-button type="submit" class="w-60 text-white font-bold bg-gray-blue-800 rounded-md border border-gray-blue-300" (click)="createTask()">
+          Crear nueva tarea
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

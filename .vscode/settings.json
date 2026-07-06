@@ -4,5 +4,14 @@
     "@ionic/angular/directives",
     "@ionic/angular/index.d.ts",
     "@ionic/angular/providers"
-  ]
+  ],
+
+  "tailwindCSS.experimental.configFile": "src/global.scss",
+
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "typescript": "html"
+  },
+
+  "editor.formatOnSave": false
 }

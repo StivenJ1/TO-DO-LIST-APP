@@ -1,2 +1,20 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+.bg-page {
+    --background: var(--color-gray-blue-200);
+}
+
+.bg-toolbar {
+    --background: var(--color-gray-blue-500);
+    --border-color: var(--color-gray-blue-500);
+}
+
+.custom-checkbox {
+  --checkbox-background: var(--color-gray-blue-100);
+}
+
+.custom-modal {
+  --width: 500px;
+  --max-width: 95vw;
+  --height: auto;
+  --border-radius: 20px;
+  --background: var(--color-gray-blue-200);
+}
