@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { RemoteConfigService } from './core/services/remote-config.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,19 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor() {}
+  
+  private remoteConfSrv = inject(RemoteConfigService);
+
+  ngOnInit() {
+    this.initData();
+  }
+
+  private async initData() {
+    await this.remoteConfSrv.loadRemoteConfig();
+    if(this.remoteConfSrv.newTheme()){
+      document.documentElement.classList.add('theme-green');
+    }else{
+      document.documentElement.classList.remove('theme-green');
+    }
+  }
 }

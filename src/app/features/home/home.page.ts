@@ -50,6 +50,10 @@ export class HomePage {
       this.globalSrv.taskList();
       this.taskList.set(this.globalSrv.taskList());
     })
+    effect(() => {
+      this.globalSrv.categoryList();
+      this.categoryList.set(this.globalSrv.categoryList());
+    })
   }
   
   ngOnInit() {    

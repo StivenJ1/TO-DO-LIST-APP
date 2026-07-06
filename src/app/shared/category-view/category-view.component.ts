@@ -18,7 +18,6 @@ export class CategoryViewComponent {
   constructor(){
     effect(() => {
       this.category();
-      console.log(this.category());
     })
   }
 

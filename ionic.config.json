@@ -1,5 +1,7 @@
 {
   "name": "TO-DO-LIST-APP",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular-standalone"
 }
