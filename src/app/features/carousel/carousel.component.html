@@ -1,0 +1,23 @@
+<ion-content class="bg-page" [fullscreen]="true">
+  <swiper-container slides-per-view="1" pagination="true"
+    class="h-full p-3 bg-linear-to-b from-gray-blue-600 via-gray-blue-200 to-gray-blue-600">
+    <swiper-slide class="h-full flex flex-col items-center justify-center gap-5">
+      <div class="text-6xl font-bold text-center text-gray-blue-800">
+        ¡Bienvenido a To Do List!
+      </div>
+      <img src="assets/images/i-logo-init.svg" />
+    </swiper-slide>
+
+    <swiper-slide class="h-full flex flex-col items-center justify-center gap-5">
+      <div class="text-3xl font-bold text-center text-gray-blue-800">
+        ¡Tu lugar para gestionar tu tiempo al realizar tus tareas!
+      </div>
+      <img src="assets/images/i-logo-init-scroll.svg" />
+      <div class="w-full h-9 flex justify-center items-center">
+        <ion-button class="w-48 text-white font-bold bg-gray-blue-800 rounded-md border border-gray-blue-300" (click)="redirect()">
+          Empezar
+        </ion-button>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>
