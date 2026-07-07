@@ -132,3 +132,23 @@ Las categorías y tareas se almacenan localmente utilizando LocalStorage, permit
 
 dentro del repositorio se encuenta un release en este se encuentra el ejecutable en android
  - https://github.com/StivenJ1/TO-DO-LIST-APP/releases/tag/V1.0.0
+
+# Observación 
+
+Acerca del archivo IPA, al no tener un equipo de marca Apple para poder configurar el proyecto y no tener la opción de pagar el Apple Developer, voy a dar la explicación del paso a paso de la generación de dicho archivo, validando el proceso.
+
+Primero se debe generar el certificado del Apple Developer para poder instalarlo en el llavero, esto para generar la validación de la ejecución.
+
+Se debe generar el Identifier con el `com.stiven.todolistapp` que se encuentra en `config.xml` para poder asociar el UDID.
+
+Con `cordova platform add ios` preparamos el proyecto.
+
+Ahora compilamos el proyecto:
+
+`cordova build ios`
+
+En Xcode damos como destino **Any iOS Device**.
+
+Y ya con eso podemos escoger si subirlo a TestFlight o generar el archivo IPA.
+
+Ya con esto tenemos la aplicación lista para subir a tiendas.
